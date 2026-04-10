@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="Ivonne & Alejandro · 19.09.2026"/>
+  <meta property="og:description" content="¡Nos casamos! Guarda la fecha: 19 de septiembre de 2026 · León, Gto."/>
+  <title>Ivonne & Alejandro · Save the Date</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#0a0a0a;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem 3rem;font-family:'Cormorant Garamond',Georgia,serif;}
+    .card{width:100%;max-width:480px;background:#0e0e0e;border:1px solid #8B6914;position:relative;overflow:hidden;}
+    .gc{position:absolute;width:60px;height:60px;opacity:0.6;}
+    .gc.tl{top:8px;left:8px;} .gc.tr{top:8px;right:8px;transform:scaleX(-1);} .gc.bl{bottom:8px;left:8px;transform:scaleY(-1);} .gc.br{bottom:8px;right:8px;transform:scale(-1);}
+    .inner{padding:2.5rem 2rem 2rem;text-align:center;position:relative;z-index:1;}
+    .pre{font-size:13px;font-weight:300;letter-spacing:0.35em;color:#a08030;text-transform:uppercase;margin-bottom:0.5rem;}
+    .names{font-family:'Great Vibes',cursive;font-size:58px;color:#f5e6c0;line-height:1.1;margin:0.3rem 0;}
+    .amp{color:#c8982a;font-size:48px;display:block;line-height:0.9;}
+    .div{display:flex;align-items:center;gap:10px;margin:1.2rem auto;width:80%;}
+    .div::before{content:'';flex:1;height:0.5px;background:linear-gradient(to right,transparent,#8B6914);}
+    .div::after{content:'';flex:1;height:0.5px;background:linear-gradient(to left,transparent,#8B6914);}
+    .dh{width:8px;height:8px;background:#c8982a;transform:rotate(45deg);flex-shrink:0;}
+    .date-main{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:#f0d98c;letter-spacing:0.05em;}
+    .loc{font-size:15px;font-weight:300;letter-spacing:0.3em;color:#a08030;text-transform:uppercase;margin:0.4rem 0;}
+    .dlabel{font-size:11px;letter-spacing:0.4em;color:#7a5f1a;text-transform:uppercase;margin-bottom:3px;}
+    .dval{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#e8d4a0;line-height:1.4;}
+    .dtime{font-size:13px;color:#a08030;margin-top:2px;font-style:italic;}
+    .cds{margin:1.8rem 0 1.2rem;padding:1.2rem;border:0.5px solid #4a3610;background:rgba(139,105,20,0.05);}
+    .cdl{font-size:10px;letter-spacing:0.4em;color:#7a5f1a;text-transform:uppercase;margin-bottom:1rem;}
+    .cdg{display:flex;justify-content:center;gap:1rem;}
+    .cdu{text-align:center;min-width:56px;}
+    .cdn{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#f0d98c;line-height:1;display:block;}
+    .cdul{font-size:9px;letter-spacing:0.3em;color:#7a5f1a;text-transform:uppercase;margin-top:4px;display:block;}
+    .cdsep{font-family:'Playfair Display',serif;font-size:28px;color:#4a3610;align-self:flex-start;margin-top:2px;}
+    .rs{margin-top:1.5rem;border-top:0.5px solid #3a2a08;padding-top:1.5rem;}
+    .rdl{font-size:12px;color:#7a5f1a;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;}
+    .rdl span{color:#c8982a;}
+    .rf label{display:block;font-size:10px;letter-spacing:0.35em;color:#7a5f1a;text-transform:uppercase;margin-bottom:5px;}
+    .rf input,.rf select{width:100%;background:#1a1408;border:0.5px solid #4a3610;color:#e8d4a0;font-family:'Cormorant Garamond',serif;font-size:15px;padding:9px 12px;outline:none;border-radius:0;-webkit-appearance:none;appearance:none;}
+    .rf input:focus,.rf select:focus{border-color:#8B6914;}
+    .rf input::placeholder{color:#4a3610;}
+    .rfb{margin-bottom:0.8rem;}
+    .ropts{display:flex;gap:10px;margin-bottom:1rem;}
+    .ropt{flex:1;padding:10px;border:0.5px solid #4a3610;background:#1a1408;color:#7a5f1a;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:0.15em;text-align:center;cursor:pointer;text-transform:uppercase;transition:all 0.2s;}
+    .ry{background:rgba(139,105,20,0.15)!important;border-color:#8B6914!important;color:#f0d98c!important;}
+    .rn{background:rgba(80,30,30,0.15)!important;border-color:#7a2a2a!important;color:#c08080!important;}
+    .rsub{width:100%;padding:13px;background:#8B6914;border:none;color:#0a0a0a;font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;transition:background 0.2s;}
+    .rsub:hover{background:#a07a20;}
+    .rsub:disabled{background:#3a2a08;color:#7a5f1a;cursor:default;}
+    .smsg{display:none;padding:1.5rem;border:0.5px solid #4a3a10;background:rgba(139,105,20,0.08);text-align:center;margin-top:1rem;}
+    .smsg .big{font-family:'Great Vibes',cursive;font-size:36px;color:#f0d98c;}
+    .smsg .sm{font-size:13px;color:#a08030;letter-spacing:0.2em;margin-top:0.5rem;}
+    .emsg{display:none;padding:1rem;border:0.5px solid #7a2a2a;background:rgba(80,30,30,0.1);text-align:center;margin-top:0.8rem;font-size:13px;color:#c08080;}
+    .ldg{display:none;font-size:13px;color:#7a5f1a;letter-spacing:0.2em;padding:0.5rem;text-align:center;}
+    .fn{font-size:11px;color:#4a3610;letter-spacing:0.3em;text-transform:uppercase;margin-top:2rem;font-style:italic;}
+    .lsvg{opacity:0.4;margin:0.3rem 0;}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <svg class="gc tl" viewBox="0 0 60 60" fill="none"><path d="M2 58 L2 2 L58 2" stroke="#8B6914" stroke-width="1.2" fill="none"/><path d="M2 18 Q10 14 14 2" stroke="#8B6914" stroke-width="0.6" fill="none"/><path d="M18 2 Q14 10 2 14" stroke="#8B6914" stroke-width="0.6" fill="none"/></svg>
+    <svg class="gc tr" viewBox="0 0 60 60" fill="none"><path d="M2 58 L2 2 L58 2" stroke="#8B6914" stroke-width="1.2" fill="none"/><path d="M2 18 Q10 14 14 2" stroke="#8B6914" stroke-width="0.6" fill="none"/><path d="M18 2 Q14 10 2 14" stroke="#8B6914" stroke-width="0.6" fill="none"/></svg>
+    <svg class="gc bl" viewBox="0 0 60 60" fill="none"><path d="M2 58 L2 2 L58 2" stroke="#8B6914" stroke-width="1.2" fill="none"/><path d="M2 18 Q10 14 14 2" stroke="#8B6914" stroke-width="0.6" fill="none"/><path d="M18 2 Q14 10 2 14" stroke="#8B6914" stroke-width="0.6" fill="none"/></svg>
+    <svg class="gc br" viewBox="0 0 60 60" fill="none"><path d="M2 58 L2 2 L58 2" stroke="#8B6914" stroke-width="1.2" fill="none"/><path d="M2 18 Q10 14 14 2" stroke="#8B6914" stroke-width="0.6" fill="none"/><path d="M18 2 Q14 10 2 14" stroke="#8B6914" stroke-width="0.6" fill="none"/></svg>
+
+    <div class="inner">
+      <p class="pre">Con la gracia de Dios</p>
+      <p class="pre" style="font-size:11px;margin-top:-4px;">tienen el honor de invitarles a su boda</p>
+      <div class="div"><div class="dh"></div></div>
+      <div class="names">Ivonne</div>
+      <div class="names"><span class="amp">&amp;</span></div>
+      <div class="names">Alejandro</div>
+      <div class="div"><div class="dh"></div></div>
+
+      <div style="margin:0.8rem 0;">
+        <div class="date-main">
+          <span>19</span>
+          <span style="color:#4a3610;font-size:24px;margin:0 6px;">·</span>
+          <span>09</span>
+          <span style="color:#4a3610;font-size:24px;margin:0 6px;">·</span>
+          <span>2026</span>
+        </div>
+        <div class="loc" style="margin-top:0.6rem;">León, Guanajuato</div>
+      </div>
+
+      <svg class="lsvg" viewBox="0 0 200 24" fill="none" width="180" height="24">
+        <path d="M100 12 Q85 4 70 8 Q85 8 80 12 Q70 8 60 10 Q75 10 72 14 Q62 10 52 13" stroke="#8B6914" stroke-width="0.8" fill="none"/>
+        <path d="M100 12 Q115 4 130 8 Q115 8 120 12 Q130 8 140 10 Q125 10 128 14 Q138 10 148 13" stroke="#8B6914" stroke-width="0.8" fill="none"/>
+        <circle cx="100" cy="12" r="2" fill="#8B6914"/>
+        <ellipse cx="75" cy="7" rx="5" ry="3" fill="none" stroke="#8B6914" stroke-width="0.6" transform="rotate(-20,75,7)"/>
+        <ellipse cx="125" cy="7" rx="5" ry="3" fill="none" stroke="#8B6914" stroke-width="0.6" transform="rotate(20,125,7)"/>
+        <ellipse cx="60" cy="11" rx="5" ry="3" fill="none" stroke="#8B6914" stroke-width="0.6" transform="rotate(-10,60,11)"/>
+        <ellipse cx="140" cy="11" rx="5" ry="3" fill="none" stroke="#8B6914" stroke-width="0.6" transform="rotate(10,140,11)"/>
+      </svg>
+
+      <div style="margin:1.5rem 0 1rem;">
+        <div style="margin:1rem 0;">
+          <div class="dlabel">Ceremonia &amp; Recepción</div>
+          <div class="dval">Roca Fiel León · San Cayetana</div>
+          <div class="dtime">Sábado 19 de septiembre · 12:00 p.m.</div>
+        </div>
+      </div>
+
+      <div class="cds">
+        <div class="cdl">Faltan</div>
+        <div class="cdg">
+          <div class="cdu"><span class="cdn" id="cd-d">—</span><span class="cdul">días</span></div>
+          <div class="cdsep">:</div>
+          <div class="cdu"><span class="cdn" id="cd-h">—</span><span class="cdul">horas</span></div>
+          <div class="cdsep">:</div>
+          <div class="cdu"><span class="cdn" id="cd-m">—</span><span class="cdul">minutos</span></div>
+          <div class="cdsep">:</div>
+          <div class="cdu"><span class="cdn" id="cd-s">—</span><span class="cdul">segundos</span></div>
+        </div>
+      </div>
+
+      <div class="rs">
+        <div class="rdl">Confirma antes del <span>31 de mayo de 2026</span></div>
+        <div class="rf" id="rsvp-form">
+          <div class="rfb">
+            <label>Tu nombre completo</label>
+            <input type="text" id="rn" placeholder="Nombre y apellido" oninput="chk()"/>
+          </div>
+          <div class="rfb">
+            <label>¿Asistirás?</label>
+            <div class="ropts">
+              <div class="ropt" id="oy" onclick="sel('yes')">Con gusto asistiré</div>
+              <div class="ropt" id="on" onclick="sel('no')">No podré asistir</div>
+            </div>
+          </div>
+          <div class="rfb" id="cw" style="display:none;">
+            <label>¿Cuántos acompañantes? (sin contarte a ti)</label>
+            <select id="rc">
+              <option value="0">Solo yo</option>
+              <option value="1">1 acompañante</option>
+              <option value="2">2 acompañantes</option>
+              <option value="3">3 acompañantes</option>
+              <option value="4">4 acompañantes</option>
+            </select>
+          </div>
+          <button class="rsub" id="rb" onclick="enviar()" disabled>Confirmar asistencia</button>
+          <div class="ldg" id="ldg">Enviando confirmación...</div>
+          <div class="emsg" id="emsg">Hubo un error al enviar. Intenta de nuevo.</div>
+        </div>
+        <div class="smsg" id="smsg">
+          <div class="big" id="st">¡Gracias!</div>
+          <div class="sm" id="ss">Tu confirmación fue recibida con alegría.</div>
+        </div>
+      </div>
+
+      <div class="fn">invite to follow</div>
+    </div>
+  </div>
+
+  <script>
+    var choice = null;
+    var SHEET_URL = 'https://script.google.com/macros/s/AKfycbz6K8RxDMj_tM9WjEISlF0YGOT2Ew8BJypoTQwt4VGD4hoQ1wQN10fTiHHVOXtjNSzx/exec';
+
+    function sel(v) {
+      choice = v;
+      document.getElementById('oy').className = 'ropt' + (v==='yes' ? ' ry' : '');
+      document.getElementById('on').className = 'ropt' + (v==='no' ? ' rn' : '');
+      document.getElementById('cw').style.display = v==='yes' ? 'block' : 'none';
+      chk();
+    }
+
+    function chk() {
+      var n = document.getElementById('rn').value.trim();
+      document.getElementById('rb').disabled = !(n.length > 1 && choice !== null);
+    }
+
+    function pad(n){ return n < 10 ? '0'+n : String(n); }
+
+    function tick() {
+      var diff = new Date('2026-09-19T12:00:00-06:00') - new Date();
+      if (diff <= 0) {
+        ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){ document.getElementById(id).textContent='0'; });
+        return;
+      }
+      document.getElementById('cd-d').textContent = Math.floor(diff/86400000);
+      document.getElementById('cd-h').textContent = pad(Math.floor(diff%86400000/3600000));
+      document.getElementById('cd-m').textContent = pad(Math.floor(diff%3600000/60000));
+      document.getElementById('cd-s').textContent = pad(Math.floor(diff%60000/1000));
+    }
+    tick(); setInterval(tick, 1000);
+
+    function enviar() {
+      var nombre = document.getElementById('rn').value.trim();
+      var acomp = choice==='yes' ? parseInt(document.getElementById('rc').value) : 0;
+      var total = choice==='yes' ? acomp + 1 : 0;
+
+      document.getElementById('rb').disabled = true;
+      document.getElementById('ldg').style.display = 'block';
+      document.getElementById('emsg').style.display = 'none';
+
+      fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ nombre: nombre, asistira: choice==='yes' ? 'Sí' : 'No', acompanantes: acomp, total: total })
+      })
+      .then(function() {
+        document.getElementById('rsvp-form').style.display = 'none';
+        document.getElementById('ldg').style.display = 'none';
+        document.getElementById('smsg').style.display = 'block';
+        if (choice==='yes') {
+          document.getElementById('st').textContent = '¡Con alegría!';
+          document.getElementById('ss').textContent = nombre + ', esperamos verte el 19 de septiembre.' + (acomp > 0 ? ' Registramos ' + total + ' lugar(es).' : '');
+        } else {
+          document.getElementById('st').textContent = 'Te echaremos de menos';
+          document.getElementById('ss').textContent = nombre + ', gracias por avisarnos. ¡Celebraremos contigo en otro momento!';
+        }
+      })
+      .catch(function() {
+        document.getElementById('ldg').style.display = 'none';
+        document.getElementById('emsg').style.display = 'block';
+        document.getElementById('rb').disabled = false;
+      });
+    }
+  </script>
+</body>
+</html>
