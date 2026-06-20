@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta property="og:title" content="Ivonne & Alejandro · 29.08.2026"/>
-  <meta property="og:description" content="¡Nos casamos! Guarda la fecha: 19 de septiembre de 2026 · León, Gto."/>
+  <meta property="og:description" content="¡Nos casamos! Guarda la fecha: 29 de agosto de 2026 · León, Gto."/>
   <title>Ivonne & Alejandro · Save the Date</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -77,9 +77,9 @@
 
       <div style="margin:0.8rem 0;">
         <div class="date-main">
-          <span>19</span>
+          <span>29</span>
           <span style="color:#4a3610;font-size:24px;margin:0 6px;">·</span>
-          <span>09</span>
+          <span>08</span>
           <span style="color:#4a3610;font-size:24px;margin:0 6px;">·</span>
           <span>2026</span>
         </div>
@@ -99,8 +99,8 @@
       <div style="margin:1.5rem 0 1rem;">
         <div style="margin:1rem 0;">
           <div class="dlabel">Ceremonia &amp; Recepción</div>
-          <div class="dval">Roca Fiel León · San Cayetana</div>
-          <div class="dtime">Sábado 19 de septiembre · 12:00 p.m.</div>
+          <div class="dval">Salón de Fiestas La Lucita<br><span style="font-size:14px;">Lucita 8, La Lucita, 37434 León de los Aldama, Gto.</span></div>
+          <div class="dtime">Sábado 29 de agosto · 12:00 p.m.</div>
         </div>
       </div>
 
@@ -175,7 +175,7 @@
     function pad(n){ return n < 10 ? '0'+n : String(n); }
 
     function tick() {
-      var diff = new Date('2026-09-19T12:00:00-06:00') - new Date();
+      var diff = new Date('2026-08-29T12:00:00-06:00') - new Date();
       if (diff <= 0) {
         ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){ document.getElementById(id).textContent='0'; });
         return;
@@ -208,7 +208,7 @@
         document.getElementById('smsg').style.display = 'block';
         if (choice==='yes') {
           document.getElementById('st').textContent = '¡Con alegría!';
-          document.getElementById('ss').textContent = nombre + ', esperamos verte el 19 de septiembre.' + (acomp > 0 ? ' Registramos ' + total + ' lugar(es).' : '');
+          document.getElementById('ss').textContent = nombre + ', esperamos verte el 29 de agosto.' + (acomp > 0 ? ' Registramos ' + total + ' lugar(es).' : '');
         } else {
           document.getElementById('st').textContent = 'Te echaremos de menos';
           document.getElementById('ss').textContent = nombre + ', gracias por avisarnos. ¡Celebraremos contigo en otro momento!';
